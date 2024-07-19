@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbyaja65qk7d4"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_kyoqa"]
+[ext_resource type="Texture2D" uid="uid://550501u2hxmb" path="res://elementary particles.png" id="1_wo7qx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mtefk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f26jx"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_kyoqa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wo7qx")
+expand_mode = 1
+
+[node name="Playbutton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -33.5
+offset_right = 75.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mtefk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_f26jx")
+text = "just play the game"
+
+[connection signal="pressed" from="Playbutton" to="." method="_on_playbutton_pressed"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn37k462vri88"]
+
+[ext_resource type="Script" path="res://Typekenttä.gd" id="1_eimn5"]
+
+[node name="Typekenttä" type="ColorRect"]
+offset_left = 550.0
+offset_top = 296.0
+offset_right = 929.0
+offset_bottom = 340.0
+color = Color(0.486275, 0.894118, 0.729412, 0.345098)
+script = ExtResource("1_eimn5")
+metadata/_edit_group_ = true
+
+[node name="Typesana" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "theword"
+scroll_active = false

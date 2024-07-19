@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ywojt5ndt5g"]
+
+[ext_resource type="Script" path="res://Tippuvatesti.gd" id="1_1a8oe"]
+[ext_resource type="Texture2D" uid="uid://bj7ikwg811tli" path="res://peepoS.png" id="2_2vtcv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wacon"]
+radius = 15.1327
+
+[node name="Tippuvatesti" type="RigidBody2D"]
+mass = 1.1
+lock_rotation = true
+script = ExtResource("1_1a8oe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_wacon")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2vtcv")

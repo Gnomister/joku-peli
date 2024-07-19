@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://14m78wbkr1qr"]
+
+[ext_resource type="Texture2D" uid="uid://dne3qpnbif578" path="res://Run-Sheet.png" id="1_axx0e"]
+[ext_resource type="Script" path="res://pelaajanappula.gd" id="1_vkl4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_230q4"]
+size = Vector2(22, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3pdo"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmc2r"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc2cf"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnbiv"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yjmx"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kgxr"]
+atlas = ExtResource("1_axx0e")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jcoaf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3pdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmc2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc2cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnbiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yjmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kgxr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pelaajanappula" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = -1.0
+lock_rotation = true
+script = ExtResource("1_vkl4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 16)
+shape = SubResource("RectangleShape2D_230q4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jcoaf")
+autoplay = "default"
